@@ -107,3 +107,9 @@ You can create the apps from here:
 Input settings and credentials into *Settings.txt* and *API Credentials.txt* by putting the data after the equals sign (=). Antyhing after a hash (#) will be ignored. Anthing on a separate line will also be ignored. No single or double quotes is required.
 
 Only put one sub Reddit on each line of *subReddits.txt*. The name of the sub Reddit is first, followed by the number of images you want it to look at. The name of the sub Reddit and the number of images needs to be seperated by a comma (,). 
+
+**You should now be good to go. :)**
+
+This definitely works for Windows 10. I'm not sure if it will work for other another OS.
+
+To get this to work each and every time you start your computer, place the executable in '..\Microsoft\Windows\Start Menu\Programs\StartUp'. Open run using Win+R and open 'shell:common startup'.
