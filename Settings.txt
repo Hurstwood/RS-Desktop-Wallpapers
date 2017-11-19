@@ -1,0 +1,21 @@
+# Screen resolution
+imageHeight : 1080 # Height (pixels)
+imageWidth : 1920 # Width (pixels)
+
+# Choose whether subReddit choice is dictated by the date (oddEven) or a random number decides
+subRedditChoice : oddEven # oddeven(day = 1st odd, 2nd even) or random
+
+# Limit the number of images per day. Just to stop the desktop from changing an unreasonable amount.
+# Just in case a large album is downloaded.
+# 15 hours. 200 images. 4Mins 30Secs per image
+imageNumLimit : 200
+
+# When to make the last wallpaper change - 1AM tomorrow
+lastImageDay : 1 # Days (add) 1 = tomorrow
+lastImageHour : 01 # Hours (actual time) 24 hour
+lastImageMin : 00 # Minutes (actual time)
+
+# When to reset the script - 9AM tomorrow
+resetDay : 1 # Days (add)  1 = tomorrow
+resetHour : 09 # Hours (actual time) 24 hour
+resetMin : 00 # Minutes (actual time)

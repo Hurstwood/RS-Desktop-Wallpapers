@@ -1,0 +1,13 @@
+wallpapers, 20
+AnimalPorn, 4
+EarthPorn, 10
+SkyPorn, 10
+waterporn, 2
+Beachporn, 2
+sunset, 5
+CityPorn, 5
+F1Porn, 2
+Amoledbackgrounds, 10
+WQHD_Wallpaper, 3
+carporn, 4
+ImaginaryWorlds, 3
