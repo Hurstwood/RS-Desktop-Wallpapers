@@ -13,6 +13,11 @@ Only images uploaded to Reddit's service and Imgur are currently supported.
 - i.redd.it links
 - Any imgur links
 
+*subReddits.txt* is baised towards collecting images just from r/wallpapers because the images posted there are generally better for desktop wallpapers. Change and set the sub Reddits that you would like to collect images from in this file.
+
+The images are saved to a folder location you set in *Settings.txt*. Every time it collects new images, it will save them to a new folder named with the date of that day. 
+
+
 ### Day of the month
 
 ##### Change *subRedditChoice* to *oddEven*
@@ -27,14 +32,13 @@ If the day of the month is odd, Eg. 1st, 3rd, 5th, etc, etc, it will collect ima
 
 It will randomly choose between collecting images from the first sub Reddit specified in *subReddits.txt* and all of the other sub Reddits.
 
-*subReddits.txt* is baised towards collecting images just from r/wallpapers because the images posted there are generally better for desktop wallpapers. Change and set the sub Reddits that you would like to collect images from in this file.
-
-
+-----
 
 ## Collecting Windows Spotlight images
 
 It copies all of the current Windows Spotlight images that are landscape.
 
+----
 
 ## Image processing
 
@@ -43,6 +47,8 @@ It checks to make sure that all images are in landscape and have a resolution th
 If the image doesn't have the correct aspect ratio, it will crop the centre of the image to match the resolution you've specified. If it does this, it copies the original image in to the folder *Originals* - just in case it crops out something important and you would like to use the image again. 
 
 The resolution is chosen by entering a value for *imageHeight* and *imageWidth* in *Settings.txt*.
+
+----
 
 ## Setting the desktop wallpapers
 
@@ -66,23 +72,27 @@ Once the last image is set or the limit is reached, it will wait until the reset
 
 If the computer is put in to hibernation or sleep, this will just advance to the correct image that it had already allocated for the time slot. If the computer is shutdown or restarted, it will restart from the beginning. 
 
+----
+
 ## Getting this project up and running
+
+**Regardless of whether you're using the Python script or the executable, you will need to create your own API key for Google/YouTube. I've outlined the steps, so it should be easy to obtain.**
 
 **Running the executable** - Jump to API keys
 
 **Using the Python script** - You will need to install a number of Python modules, which can be easily installed using:
 
-- `$ pip install praw`
+`$ pip install praw`
 
-- `$ pip install imgurpython'
+`$ pip install imgurpython`
 
-- '$ pip install Image'
+`$ pip install Image`
 
-- '$ pip install subprocess'
+`$ pip install subprocess`
 
-- '$ pip install urllib'
+`$ pip install urllib`
 
-### API keyss
+### API keys
 
 You need to create apps for Reddit and Imgur and save their credentials in to *API Credentials.txt*. 
 
@@ -90,9 +100,10 @@ You can create the apps from here:
 - Reddit API https://www.reddit.com/prefs/apps/
 - Imgur API https://imgur.com/account/settings/apps
 
+----
 
-### Inputting the options in the the text files
+## Inputting the options in the the text files
 
-Input settings and credentials into *Settings.txt* and *API Credentials.txt* by putting the data after the colon (:). Antyhing after a hash (#) will be ignored. Anthing on a separate line will also be ignored. No single or double quotes is required.
+Input settings and credentials into *Settings.txt* and *API Credentials.txt* by putting the data after the equals sign (=). Antyhing after a hash (#) will be ignored. Anthing on a separate line will also be ignored. No single or double quotes is required.
 
 Only put one sub Reddit on each line of *subReddits.txt*. The name of the sub Reddit is first, followed by the number of images you want it to look at. The name of the sub Reddit and the number of images needs to be seperated by a comma (,). 
