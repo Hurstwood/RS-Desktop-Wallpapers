@@ -24,7 +24,7 @@ from PIL import Image
 # Load the settings
 file = open("Settings.txt", "r")
 for line in file: 
-	lineParts = line.split(':')
+	lineParts = line.split('=')
 	lineParts[0] = lineParts[0].strip()
 	
 	if len(lineParts) > 1:
@@ -43,6 +43,12 @@ for line in file:
 	# subReddit choice
 	if lineParts[0] == 'subRedditChoice':
 		subRedditChoice = lineParts2[0]
+		
+	# Image folder
+	if lineParts[0] == 'imageFolder':
+		imageFolder = lineParts2[0]
+	
+		
 		
 	# Limit the number of images to be set each day	
 	if lineParts[0] == 'imageNumLimit':
@@ -86,7 +92,7 @@ file.close()
 # Load the API credentials
 file = open("API Credentials.txt", "r")
 for line in file: 
-	lineParts = line.split(':')
+	lineParts = line.split('=')
 	lineParts[0] = lineParts[0].strip()
 	
 	if len(lineParts) > 1:
@@ -459,7 +465,7 @@ if __name__ == '__main__':
 		if test_connection():
 			
 			# Check for today's wallpapers directory and create if needed
-			imageLocation = "D:/Dropbox/Current/Documents/Wallpapers/" + time.strftime("%Y-%m-%d", time.gmtime()) + "/"
+			imageLocation = imageFolder + time.strftime("%Y-%m-%d", time.gmtime()) + "/"
 			print("imageLocation:  ",imageLocation)
 			if not os.path.exists(imageLocation):
 				os.makedirs(imageLocation)
